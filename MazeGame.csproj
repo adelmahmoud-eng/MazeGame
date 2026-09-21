@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>MazeGame</AssemblyName>
+    <RootNamespace>MazeGame</RootNamespace>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WebView2 embeds a real Chromium/Edge browser inside the WinForms app,
+         used to load the actual blockly.games Maze site so the game is 100% identical
+         to the original (not a custom re-implementation). Requires the WebView2 Runtime,
+         which ships with Windows 10/11 + Edge by default. -->
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+  </ItemGroup>
+
+</Project>
